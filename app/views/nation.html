@@ -1,1 +1,18 @@
-<p>This is the nation view.</p>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Popolazione</th>
+      <th>Area</th>
+      <th>Densita</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="nation in nations">
+      <td>{{ nation.name }}</td>
+      <td>{{ nation.population | number }}</td>
+      <td>{{ nation.area | number }}</td>
+      <td>{{ nation.population / nation.area | number:2 }}</td>
+    </tr>
+  </tbody>
+</table>
