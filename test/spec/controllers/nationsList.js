@@ -23,8 +23,8 @@ describe('Controller: NationslistCtrl', function () {
           200,
           [
             {'name': 'nation1', 'area': '100', 'population': '500', 'capital': 'Capital 1'},
-            {'name': 'nation2', 'area': '200', 'population': '1000', 'capital': 'Capital 2'},
-            {'name': 'nation3', 'area': '300', 'population': '1500', 'capital': 'Capital 3'},
+            {'name': 'nation2', 'area': '200', 'population': '200', 'capital': 'Capital 2'},
+            {'name': 'nation3', 'area': '500', 'population': '100', 'capital': 'Capital 3'},
           ],
           {}
         ];
@@ -64,13 +64,13 @@ describe('Controller: NationslistCtrl', function () {
 
     it('capital', function(){
       angular.forEach(scope.nations, function(nation){
-        expect(nation.density).toBeDefined();
+        expect(nation.capital).toBeDefined();
       });
     });
 
     it('area', function(){
       angular.forEach(scope.nations, function(nation){
-        expect(nation.density).toBeDefined();
+        expect(nation.area).toBeDefined();
       });
     });
 
