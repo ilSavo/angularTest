@@ -43,4 +43,72 @@ describe('Controller: NationslistCtrl', function () {
     expect(scope.nations).toBeDefined();
   });
 
+  it('must return status', function () {
+    expect(scope.status).toBeDefined();
+  });
+
+  it('status need to be true', function () {
+    expect(scope.status).toBe(true);
+  });
+
+  it('nations must be a defined value', function () {
+    expect(scope.nations.length).toBe(3);
+  });
+
+  describe('all nations must have', function () {
+    it('name', function () {
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.name).toBeDefined();
+      });
+    });
+
+    it('capital', function(){
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.density).toBeDefined();
+      });
+    });
+
+    it('area', function(){
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.density).toBeDefined();
+      });
+    });
+
+    it('area is integer', function(){
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.area).toMatch(/\d{1,}/);
+      });
+    });
+
+    it('population', function(){
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.population).toBeDefined();
+      });
+    });
+
+    it('population is integer', function(){
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.population).toMatch(/\d{1,}/);
+      });
+    });
+
+    it('selected', function(){
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.selected).toBeDefined();
+      });
+    });
+
+    it('density', function(){
+      angular.forEach(scope.nations, function(nation){
+        expect(nation.density).toBeDefined();
+      });
+    });
+
+    it('density have right value', function(){
+      expect(scope.nations[0].density).toBe(5);
+      expect(scope.nations[1].density).toBe(1);
+      expect(scope.nations[2].density).toBe(0.2);
+    });
+
+  });
 });
