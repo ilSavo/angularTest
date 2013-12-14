@@ -1,18 +1,24 @@
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Popolazione</th>
-      <th>Area</th>
-      <th>Densita</th>
+      <th></th>
+      <th><a href="">Nome</a></th>
+      <th><a href="">Area <br/>[km<sup>2</sup>]</a></th>
+      <th><a href="">Population <br/>[ppl]</a></th>
+      <th>Densità <br/>[ppl/km<sup>2</sup>]</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="nation in nations">
+      <td><input type="checkbox" ng-checked="nation.compare" ng-model="nation.compare" /></td>
       <td>{{ nation.name }}</td>
-      <td>{{ nation.population | number }}</td>
       <td>{{ nation.area | number }}</td>
+      <td>{{ nation.population | number }}</td>
       <td>{{ nation.population / nation.area | number:2 }}</td>
     </tr>
   </tbody>
 </table>
+
+<ul>
+  <li ng-repeat="nation in nations | filter:{compare:true}">{{ nation.name }}</li>
+</ul>
