@@ -4,24 +4,24 @@
     "name": "Albania",
     "area": "28748",
     "population": "2994667",
-    "Capital": "Tirana"
+    "capital": "Tirana"
   },
   {
     "name": "Andorra",
     "area": "468",
     "population": "82403",
-    "Capital": "Andorra la Vella"
+    "capital": "Andorra la Vella"
   },
   {
     "name": "Armenia",
     "area": "29743",
     "population": "3262000",
-    "Capital": "Yerevan"
+    "capital": "Yerevan"
   },
   {
     "name": "Austria",
     "area": "83858",
     "population": "8414638",
-    "Capital": "Vienna"
+    "capital": "Vienna"
   }
 ]
