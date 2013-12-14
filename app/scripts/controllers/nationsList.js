@@ -11,12 +11,10 @@ angular.module('compare2App')
         $scope.nations = data;
 
         angular.forEach($scope.nations, function (value, key) {
-          //console.log($scope.nations[key].population + " / " + $scope.nations[key].area);
           $scope.nations[key].area = parseInt($scope.nations[key].area);
           $scope.nations[key].population = parseInt($scope.nations[key].population);
           $scope.nations[key].density = value.population / value.area;
           $scope.nations[key].selected = false;
-          //console.log($scope.nations[key].population / $scope.nations[key].area);
         });
       })
       .error( function() {
